@@ -22,5 +22,5 @@ app.get('/loan/:loanAmount/:months', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${hostname}:${port}/ `);
+    console.log(`Server running on port ${PORT}/ `);
 });
