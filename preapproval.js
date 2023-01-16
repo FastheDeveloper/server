@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 3000;
-const hostname = '0.0.0.0'
+const PORT = process.env.PORT || 3030;
+
 app.get('/loan/:loanAmount/:months', (req, res) => {
     const loanAmount = parseFloat(req.params.loanAmount);
     const months = parseInt(req.params.months);
@@ -21,6 +21,6 @@ app.get('/loan/:loanAmount/:months', (req, res) => {
     });
 });
 
-app.listen(port, hostname, () => {
+app.listen(PORT, () => {
     console.log(`Server running on port ${hostname}:${port}/ `);
 });
